@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_item_tiwen"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_high_wendu1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="38"
+        android:textSize="@dimen/text_14" />
+
+    <TextView
+        android:id="@+id/tv_high_time_day1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="@dimen/text_12" />
+
+    <TextView
+        android:id="@+id/tv_high_time_hour1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="11:00"
+        android:textSize="@dimen/text_12" />
+</LinearLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="@dimen/x3"
+        app:cardBackgroundColor="@color/liang"
+        app:cardCornerRadius="@dimen/x5"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x50">
+
+                <!--<TextView-->
+                    <!--android:id="@+id/item_num"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:layout_marginLeft="5dp"-->
+                    <!--android:layout_marginRight="3dp"-->
+                    <!--android:textColor="#6cc8f1"-->
+                    <!--android:textSize="16sp"-->
+                    <!--tool:text="123" />-->
+
+                <ImageView
+                    android:id="@+id/item_ivZt"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="@dimen/x3"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/wzx" />
+
+                <TextView
+                    android:id="@+id/item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/item_ivZt"
+                    android:padding="@dimen/x3"
+                    android:textColor="#222222"
+                    android:textSize="16sp"
+                    tool:text="名字" />
+
+                <TextView
+                    android:id="@+id/item_chuang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/item_name"
+                    android:padding="@dimen/x3"
+                    android:textColor="#a3a3a3"
+                    android:textSize="12sp"
+                    tool:text="床位" />
+
+                <!--<TextView-->
+                    <!--android:id="@+id/item_xscikshu"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_toRightOf="@+id/item_chuang"-->
+                    <!--android:padding="@dimen/x3"-->
+                    <!--android:textColor="#666666"-->
+                    <!--android:textSize="16sp"-->
+                    <!--tool:text="× 3" />-->
+
+                <LinearLayout
+                    android:gravity="right"
+                    android:layout_toRightOf="@+id/item_xscikshu"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <!--<TextView-->
+                    <!--android:id="@+id/item_huitui"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:layout_marginRight="@dimen/x8"-->
+                    <!--android:layout_toLeftOf="@+id/item_xunshi"-->
+                    <!--android:background="@drawable/item_huitui"-->
+                    <!--android:gravity="center"-->
+                    <!--android:paddingBottom="@dimen/x3"-->
+                    <!--android:paddingLeft="@dimen/x8"-->
+                    <!--android:paddingRight="@dimen/x8"-->
+                    <!--android:paddingTop="@dimen/x3"-->
+                    <!--android:text="回退"-->
+                    <!--android:textColor="@android:color/white"-->
+                    <!--android:textSize="14sp" />-->
+
+                <TextView
+                    android:id="@+id/item_xunshi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/x5"
+                    android:background="@drawable/item_xunshi"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/x3"
+                    android:paddingLeft="@dimen/x8"
+                    android:paddingRight="@dimen/x8"
+                    android:paddingTop="@dimen/x3"
+                    android:text="巡视"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!--<enjoyor.enjoyorzemobilehealth.views.CoustomListView-->
+            <!--android:id="@+id/lv_into"-->
+            <!--android:visibility="gone"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

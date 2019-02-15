@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/ll_top_bg"
+    android:layout_width="match_parent"
+    android:layout_height="154dp"
+    android:background="@drawable/yizhu_img_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/iv_touxiang"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_men" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/tv_patient_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv_entry_age"
+            android:textSize="17.3sp"
+            tool:text="于小菲" />
+
+        <TextView
+            android:id="@+id/tv_entry_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_patient_name"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/x3"
+            android:textColor="#ffb705"
+            android:textSize="14sp"
+            tool:text="10" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp">
+
+        <TextView
+            android:id="@+id/tv_chuanghao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="60dp"
+            android:background="@color/my_bule"
+            android:padding="2dp"
+            android:text="1-101床"
+            android:textColor="#EEF4FD"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:background="#669CA2A8"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_time_tishi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:text="40-42文字:"
+            android:textColor="#EEF4FD"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_ohter_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_time_tishi"
+            android:padding="@dimen/x3"
+            android:textColor="#EEF4FD"
+            android:textSize="13sp"
+            tool:text="11:00" />
+
+        <TextView
+            android:id="@+id/tv_time_hm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50dp"
+            android:text="11:00"
+            android:textColor="#EEF4FD"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_time_ymd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/tv_time_hm"
+            android:text="2017-02-03"
+            android:textColor="#EEF4FD"
+            android:textSize="13sp" />
+    </RelativeLayout>
+</LinearLayout>

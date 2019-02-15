@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_ssjlcx"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="enjoyor.enjoyorzemobilehealth.activity.xxcx.SsjlcxActivity"
+    >
+    <include layout="@layout/layou_include"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/bai"
+        android:id="@+id/yslb"/>
+    <!--无数据展示-->
+    <include layout="@layout/layout_empty" />
+</LinearLayout>

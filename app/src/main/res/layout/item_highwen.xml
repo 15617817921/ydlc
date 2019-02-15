@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_highwen"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="8.5"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x3"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_high_image"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:src="@drawable/icon_men" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="bottom|right"
+                android:background="#e19232"
+                app:cardBackgroundColor="#ffb705"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:id="@+id/tv_high_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="16"
+                    android:textColor="#fff"
+                    android:textSize="10sp" />
+            </android.support.v7.widget.CardView>
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_high_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x2"
+            android:layout_weight="1.3"
+            android:gravity="center"
+            android:text="张三三"
+            android:textSize="@dimen/text_14" />
+
+        <TextView
+            android:id="@+id/tv_high_chuang"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x2"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:text="TT001"
+            android:textSize="@dimen/text_14" />
+        <!--展示温度-->
+        <enjoyor.enjoyorzemobilehealth.views.CoustomGridView
+            android:id="@+id/gv_tiwen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x2"
+            android:layout_marginRight="@dimen/x2"
+            android:layout_weight="5"
+            android:numColumns="4"
+         />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="@dimen/x3"
+        android:paddingBottom="@dimen/x3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/view" />
+</LinearLayout>

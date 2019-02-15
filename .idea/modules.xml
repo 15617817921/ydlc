@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/EnjoyorZEMobileHealth.iml" filepath="$PROJECT_DIR$/EnjoyorZEMobileHealth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/my_network/my_network.iml" filepath="$PROJECT_DIR$/my_network/my_network.iml" />
+      <module fileurl="file://$PROJECT_DIR$/my_xml/my_xml.iml" filepath="$PROJECT_DIR$/my_xml/my_xml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sliding_menu/sliding_menu.iml" filepath="$PROJECT_DIR$/sliding_menu/sliding_menu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xmltojson/xmltojson.iml" filepath="$PROJECT_DIR$/xmltojson/xmltojson.iml" />
+    </modules>
+  </component>
+</project>

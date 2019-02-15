@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><!--Spinner 下拉Item的样式-->
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:text="今后不死uf"
+    android:maxEms="6"
+    android:singleLine="true"
+    android:paddingLeft="@dimen/x10"
+    android:paddingRight="@dimen/x10"
+    android:paddingTop="@dimen/x5"
+    android:paddingBottom="@dimen/x5"
+    android:textSize="@dimen/text_18" />

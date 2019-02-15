@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="enjoyor.enjoyorzemobilehealth">
+
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+
+    <!--SYSTEM_OVERLAY_WINDOW  SYSTEM_ALERT_WINDOW-->
+    <!-- Required to act as a custom watch face. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />//广播权限
+
+    <uses-permission
+        android:name="android.permission.STATUS_BAR"
+        tools:ignore="ProtectedPermissions" />
+
+
+    <!--<protected-broadcast android:name="com.mobilead.intent.action.scan_result" />-->
+    <!--<protected-broadcast android:name="com.mobilead.intent.action.SCANKEY_DOWN" />-->
+    <!--<protected-broadcast android:name="com.mobilead.intent.action.SCANKEY_UP" />-->
+    <!--<protected-broadcast android:name="com.mobilead.intent.action.SCANKEY_PRESSED" />-->
+
+
+    <application
+        android:name=".application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.Base">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="enjoyor.enjoyorzemobilehealth.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <!--欢迎页面-->
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+           >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".activity.NetWorkTestActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+           android:name=".activity.home.HomePageActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_home_page"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".activity.home.BrlbActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BryzActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".other.OkHttpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ZXYZActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".other.Test"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BingQuYiZhuActivity"
+            android:label="@string/title_activity_bing_qu_yi_zhu"
+            android:screenOrientation="portrait"
+            />
+
+
+
+        <activity
+            android:name=".activity.RyjdActivity"
+            android:screenOrientation="portrait"
+           ></activity>
+
+
+        <!--危险评估-->
+        <activity
+            android:name=".activity.danger.DangerActivity"
+            android:screenOrientation="portrait"
+           ></activity>
+        <!--1 压疮评估-->
+        <activity
+            android:name=".activity.danger.YaChuangActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--2  坠床、跌倒-->
+        <activity
+            android:name=".activity.danger.FallBedActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--3  ADL评估  自理能力-->
+        <activity
+            android:name=".activity.danger.ZiLiAbilityActivity"
+            android:screenOrientation="portrait" />
+        <!--4  非计划先拔管评估-->
+        <activity
+            android:name=".activity.danger.UnPlanActivity"
+            android:screenOrientation="portrait"
+            />
+        <!-- 5 疼痛（自评）-->
+        <activity
+            android:name=".activity.danger.PainZiPingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!--6  疼痛（他评-->
+        <activity
+            android:name=".activity.danger.PainTaPingActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <!--7  VTE风险护理-->
+        <activity
+            android:name=".activity.danger.VteRiskActivity"
+            android:screenOrientation="portrait"
+            />
+
+
+        <activity
+            android:name=".activity.home.ShengMingTiZhengLuRuActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <!--android:windowSoftInputMode="adjustPan|stateAlwaysHidden">-->
+
+        </activity>
+
+        <!--体温查看-->
+        <activity
+            android:name=".activity.home.TemperatureChartActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.home.ChuangWeiLiuZhuanActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name=".activity.TemperatureDetailActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name=".activity.HuLiDanActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+
+        <activity
+            android:name=".activity.HuLiDanDetailActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name=".activity.ZongJieTypeSelectActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.xxcx.BrxxcxActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.home.XxcxActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.infosearch.JcjgcxActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.xxcx.JyjgcxActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.xxcx.SsjlcxActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.infosearch.SsjlxqActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.home.XhcxActivity"
+            android:screenOrientation="portrait">
+
+
+        </activity>
+        <activity
+            android:name=".activity.infosearch.BqxhcxActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.xxcx.yinshiActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.infosearch.TiWenJCDActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name=".activity.JkjyActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.home.BryzBbenActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name=".activity.BrxxActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name=".activity.SscxActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name=".activity.RypgActivity"
+            android:screenOrientation="portrait">
+
+
+        </activity>
+
+        <activity
+            android:name=".activity.BloodSugarCheckActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+
+
+        </activity>
+        <activity
+            android:name=".activity.BloodSugarDetailActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <!-- 新增 -->
+        <activity
+            android:name=".activity.PingTieXinXiActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.ZhiXingJiLuActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name=".activity.SsHuLiDanActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.SsHuLiDanDtailActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.YcPingGuDanActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.YcPingGuDanDetailActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.home.SXHeDuiActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <!--滨州医学院烟台附院的血糖监测Activity-->
+        <activity
+            android:name=".activity.bzyxyytfy.BloodSugarCheckActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"></activity>
+
+        <activity
+            android:name=".activity.home.HeDuiActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name="qdh.jyhd.HeDuiJLActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name="qdh.hdl.NewHuliDanActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name="qdh.sxbbcj.SxbbcjActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name="qdh.sxbbsc.SxbbscActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name="qdh.sd.SxsdActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <!--android:windowSoftInputMode="adjustPan"-->
+        <activity
+            android:name="qdh.sxq.SxqhdActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name="hld.next.NewQdhHuLiDanActivity"
+            android:screenOrientation="portrait"
+           >
+
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+
+        <activity
+            android:name="com.bben.danger.BarthelActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="com.bben.danger.CapriniActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="enjoyor.enjoyorzemobilehealth.activity.xxcx.HighTiwenActivity"
+            android:screenOrientation="portrait"
+            />
+        <!-- 护理查询-->
+        <activity
+            android:name=".activity.home.HuLiActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <!-- 护理详情人数-->
+        <activity
+            android:name=".activity.hulistate.HuLiDetailsAct"
+            android:screenOrientation="portrait"
+            />
+
+        <!-- 滴眼 单个病人-->
+        <activity
+            android:name=".activity.home.DiYanActivity"
+            android:screenOrientation="portrait"
+            />
+
+    </application>
+
+
+</manifest>
+
+

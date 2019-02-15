@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_hedui"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="enjoyor.enjoyorzemobilehealth.activity.HeDuiActivity"
+    >
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/my_bule">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="输血"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_1" />
+        <TextView
+            android:id="@+id/bq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center"
+            android:layout_marginRight="12dp"
+            android:text="核对记录"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:visibility="gone"/>
+    </FrameLayout>
+    <!--病人信息-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="142.5dp"
+        android:layout_below="@+id/no2"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/yizhu_img15x"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/tx"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right"
+                android:src="@drawable/icon_men" />
+
+            <TextView
+                android:id="@+id/mz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="2dp"
+                android:background="#00ffffff"
+                android:text="于小斐"
+                android:textColor="#333333"
+                android:textSize="@dimen/text_1" />
+
+            <TextView
+                android:id="@+id/ch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="2dp"
+                android:background="@color/my_bule"
+                android:text="1-101床"
+                android:textColor="#fff"
+                android:textSize="@dimen/text_4" />
+
+            <TextView
+                android:gravity="right"
+                android:id="@+id/brxx"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="2dp"
+                android:text=""
+                android:textColor="#ff0000"
+                android:textStyle="bold"
+                android:textSize="18dp" />
+
+
+        </LinearLayout>
+
+
+
+        <!--<LinearLayout
+            android:id="@+id/sjxz"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_marginTop="18dp"
+            android:background="#98403e3e"
+            android:gravity="right">
+            <TextView
+                android:id="@+id/sj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="14dp"
+                android:text="2017/6/30"
+                android:textSize="13sp"
+                android:textColor="#ffffff"/>
+
+        </LinearLayout>-->
+    </LinearLayout>
+    <RadioGroup android:id="@+id/radioGroup"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <RadioButton android:id="@+id/sx_sate1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="输血开始"
+            android:checked="true"/>
+        <RadioButton android:id="@+id/sx_sate2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="输血15分钟" />
+        <RadioButton android:id="@+id/sx_sate3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="输血结束" />
+    </RadioGroup>
+    <TextView
+        android:id="@+id/tv_hedui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#3f90eb"
+        android:textSize="20sp"
+        android:layout_marginLeft="12dp"
+        android:text="核对"
+        android:visibility="gone"/>
+    <LinearLayout
+        android:id="@+id/nodata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/search"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="查询不到任何需要核对项"
+            android:textSize="12sp"
+            android:textColor="#a3a3a3"/>
+    </LinearLayout>
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/bai"
+        android:id="@+id/bgd"
+        android:visibility="visible">
+    </ListView>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout
+        android:id="@+id/all"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        //
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#000000"/>
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:text="护士者 :"
+                android:id="@+id/no1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginLeft="8dp"/>
+            <EditText
+                android:id="@+id/hs1"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                />
+            <TextView
+                android:text="见证者 :"
+                android:id="@+id/jzz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginLeft="8dp"/>
+            <EditText
+                android:id="@+id/jz2"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:text="血袋号 :"
+                android:id="@+id/xdh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginLeft="8dp"/>
+            <EditText
+                android:id="@+id/xd3"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                />
+            <TextView
+                android:text="开始时间 :"
+                android:id="@+id/kssj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginLeft="8dp"/>
+            <EditText
+                android:id="@+id/ks4"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:text="心率 :"
+                android:id="@+id/no9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginLeft="8dp"/>
+            <EditText
+                android:id="@+id/xl5"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                />
+            <TextView
+                android:text="次/分钟"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"/>
+            <TextView
+                android:text="体温 :"
+                android:id="@+id/no11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginLeft="8dp"/>
+            <EditText
+                android:id="@+id/tw6"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                />
+            <TextView
+                android:text="℃"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:text="呼吸 :"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginLeft="8dp"/>
+            <EditText
+                android:id="@+id/hx7"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                />
+            <TextView
+                android:text="次/分钟"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"/>
+            <TextView
+                android:text="氧气饱和度 :"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginLeft="8dp"/>
+            <EditText
+                android:id="@+id/yq8"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                />
+            <TextView
+                android:text="%"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:text="血压 :"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginLeft="8dp"/>
+            <EditText
+                android:id="@+id/xy9"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                />
+            <TextView
+                android:text="/"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"/>
+
+            <EditText
+                android:id="@+id/xy10"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                />
+            <TextView
+                android:text="mmHg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:text="输注方式 :"
+                android:id="@+id/szfs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginLeft="8dp"/>
+            <Spinner
+                android:background="@drawable/shape_corner"
+                android:id="@+id/spinner1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+            </Spinner>
+            <Spinner
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/shape_corner"
+                android:id="@+id/spinner2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </Spinner>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/sxqyy"
+                android:text="输血前用药 :"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginLeft="8dp"/>
+            <Spinner
+                android:background="@drawable/shape_corner"
+                android:id="@+id/spinner3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </Spinner>
+            <Spinner
+                android:visibility="gone"
+                android:id="@+id/spinner4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </Spinner>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/bc"
+                android:text="保存"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:layout_marginLeft="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+
+
+
+</LinearLayout>

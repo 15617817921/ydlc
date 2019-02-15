@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="enjoyor.enjoyorzemobilehealth.activity.home.HomePageActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="46.08dp"
+        android:background="@color/my_bule"
+        android:elevation="4dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:titleTextAppearance="@style/Toolbar.TitleText">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00ffffff">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="银江移动医疗"
+                android:textColor="#fff"
+                android:textSize="22sp" />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="13dp"
+                android:background="#00ffffff"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/image_o1"
+                    android:layout_width="@dimen/x24"
+                    android:layout_height="@dimen/x24"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/x10"
+                    android:src="@drawable/icon_message" />
+
+                <ImageView
+                    android:id="@+id/image_o2"
+                    android:layout_width="@dimen/x24"
+                    android:layout_height="@dimen/x24"
+                    android:layout_alignParentRight="true"
+                    android:layout_toLeftOf="@+id/image_o1"
+                    android:layout_marginRight="@dimen/x10"
+                    android:src="@drawable/icon_change" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/gh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:textColor="#e13535"
+        android:textSize="20sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
